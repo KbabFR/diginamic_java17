@@ -1,7 +1,7 @@
 package fr.diginamic.java17.gestiondepersonnes.enums;
 
 public enum Genre {
-	Homme,Femme,NonBinaire;
+	Homme,Femme,NonBinaire,Trap;
 	
 
 }
