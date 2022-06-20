@@ -14,9 +14,9 @@ public class AppOptional {
 	public static void main(String[] args) {
 
 		List<Personne> lp = new ArrayList<>();
-		lp.add(new Facteur("Jolie","Sylvie",Genre.Femme));
-		lp.add(new Facteur("Morand","Yassine",Genre.NonBinaire));
-		lp.add(new Facteur("Dutour","Jean",Genre.Homme));
+		lp.add(new Facteur("Jolie","Sylvie",Genre.Femme, 35));
+		lp.add(new Facteur("Morand","Yassine",Genre.NonBinaire, 26));
+		lp.add(new Facteur("Dutour","Jean",Genre.Homme, 90));
 		
 		Optional<Personne> op = PersonneServices.findByNamePersonne(lp, "jOlIE");
 		if(op.isEmpty())

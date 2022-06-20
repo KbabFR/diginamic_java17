@@ -19,11 +19,17 @@ public class AppOptionalVoiture {
 		lv.add(new VoiturePoste("963-852-741"));
 		lv.add(new VoiturePoste("789-456-123"));
 		
-		Optional<Voiture> op = VoitureServices.findByImmatVoiture(lv, "963-852-741");
-		if(op.isEmpty())
-			System.out.println("Personne non trouvée");
-		if(op.isPresent())
-			System.out.println("Personne trouvée : " + op.get());
+		Optional<Voiture> opv = VoitureServices.findByImmatVoiture(lv, "963-852-741");
+		if(opv.isEmpty())
+			System.out.println("Voiture non trouvée");
+		if(opv.isPresent())
+			System.out.println("Voiture trouvée : " + opv.get());
+		
+		Optional<List<Voiture>> oplv = VoitureServices.findsByPartialImmatVoiture(lv, "123");
+		if(oplv.isEmpty())
+			System.out.println("Voiture non trouvée");
+		if(oplv.isPresent())
+			System.out.println("Voiture trouvée : " + oplv.get());
 
 	}
 

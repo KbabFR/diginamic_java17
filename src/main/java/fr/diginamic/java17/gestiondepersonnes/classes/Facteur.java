@@ -5,8 +5,8 @@ import fr.diginamic.java17.gestiondepersonnes.interfaces.Ifacteur;
 
 public class Facteur extends Personne implements Ifacteur {
 
-	public Facteur(String nom, String prenom, Genre genre) {
-		super(nom, prenom, genre);
+	public Facteur(String nom, String prenom, Genre genre, int age) {
+		super(nom, prenom, genre, age);
 	}
 
 	@Override
